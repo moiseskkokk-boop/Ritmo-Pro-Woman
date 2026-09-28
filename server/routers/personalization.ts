@@ -313,6 +313,8 @@ export const personalizationRouter = router({
       const previousContext = previous.map(item => ({ label: item.label, date: item.assessmentDate, weightKg: item.weightKg, measurements: parseJson(item.measurementsJson, {}) }));
       const languageLabel = languageName(input.language);
       const response = await invokeLLM({
+        userId: ctx.user.id,
+        feature: "body_analysis",
         model: "gemini-3-flash-preview",
         maxTokens: 5000,
         messages: [
