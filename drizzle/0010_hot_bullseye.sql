@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `profilePhotoKey` varchar(255);

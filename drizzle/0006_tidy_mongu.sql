@@ -1,0 +1,1 @@
+ALTER TABLE `notification_preferences` MODIFY COLUMN `reminderDaysJson` text;

@@ -1,0 +1,1 @@
+ALTER TABLE `body_assessments` ADD `weekKey` varchar(10);

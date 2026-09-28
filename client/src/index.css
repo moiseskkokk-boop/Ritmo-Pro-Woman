@@ -1,0 +1,161 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  --background: #f5f2ee;
+  --foreground: #171717;
+  --card: #fffdf9;
+  --card-foreground: #171717;
+  --popover: #fffdf9;
+  --popover-foreground: #171717;
+  --primary: #171717;
+  --primary-foreground: #fffdf9;
+  --secondary: #eee9e4;
+  --secondary-foreground: #171717;
+  --muted: #ece7e1;
+  --muted-foreground: #736c66;
+  --accent: #f5a7c7;
+  --accent-foreground: #171717;
+  --destructive: #bc2c4f;
+  --border: #d9d2cc;
+  --input: #d9d2cc;
+  --ring: #171717;
+  --radius: 1.25rem;
+  --pink: #f5a7c7;
+  --pink-deep: #e878aa;
+  --ink: #171717;
+  --paper: #f5f2ee;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Manrope", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--pink-deep); outline-offset: 3px; }
+input::placeholder, textarea::placeholder { color: rgba(23,23,23,.38); }
+::selection { background: var(--pink); color: var(--ink); }
+
+@layer base {
+  :root {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+  }
+}
+
+.font-mono-label { font-family: "DM Mono", monospace; letter-spacing: .02em; }
+.paper-grain {
+  background-image: radial-gradient(rgba(23,23,23,.055) .55px, transparent .55px);
+  background-size: 6px 6px;
+}
+.soft-grid {
+  background-image: linear-gradient(rgba(23,23,23,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(23,23,23,.035) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .enter-up { animation: enterUp .45s var(--ease-out) both; }
+  .enter-up:nth-child(2) { animation-delay: 55ms; }
+  .enter-up:nth-child(3) { animation-delay: 100ms; }
+  .enter-up:nth-child(4) { animation-delay: 145ms; }
+  .pressable { transition: transform 160ms var(--ease-out), box-shadow 160ms var(--ease-out), background-color 160ms ease; }
+  .pressable:active { transform: scale(.97); }
+}
+@keyframes enterUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--paper); }
+::-webkit-scrollbar-thumb { background: #c9c1ba; border-radius: 99px; border: 3px solid var(--paper); }
+
+html.dark body { background: #0d1110; color: #f3fff5; }
+html.dark [class~="bg-[#f5f2ee]"] { background-color: #0d1110 !important; }
+html.dark [class*="bg-[#f5f2ee]/"] { background-color: rgba(13,17,16,.92) !important; }
+html.dark [class~="bg-[#fffdf9]"] { background-color: #151b18 !important; }
+html.dark [class~="text-[#171717]"] { color: #f3fff5 !important; }
+html.dark [class*="text-black/"] { color: rgba(243,255,245,.62) !important; }
+html.dark [class*="border-black/"] { border-color: rgba(243,255,245,.16) !important; }
+html.dark [class~="hover:border-black/30"]:hover { border-color: rgba(243,255,245,.35) !important; }
+html.dark [class~="bg-[#171717]"] { background-color: #151b18 !important; }
+html.dark [class~="text-[#fffdf9]"] { color: #f3fff5 !important; }
+html.dark [class~="bg-[#eee9e4]"] { background-color: #1b2420 !important; }
+html.dark [class~="border-white/20"] { border-color: rgba(255,255,255,.2) !important; }
+html.dark ::-webkit-scrollbar-track { background: #0d1110; }
+html.dark ::-webkit-scrollbar-thumb { background: #35413b; border-color: #0d1110; }
+html.dark .exercise-image-panel { background: #fffdf9 !important; border-bottom: 1px solid rgba(255,255,255,.12); }
+html.dark .exercise-image { mix-blend-mode: normal !important; object-fit: contain !important; padding: 10px; filter: none !important; }
+html.dark .exercise-card { box-shadow: 0 14px 30px rgba(0,0,0,.24); }
+html.dark input::placeholder, html.dark textarea::placeholder { color: rgba(243,255,245,.32); }
+html.dark select option { background: #151b18; color: #f3fff5; }
+html.dark .metric-strip, html.dark .metric-strip * { color: #171717 !important; }
+
+.exercise-card { box-shadow: 0 10px 24px rgba(23,23,23,.06); }
+.exercise-card:hover { transform: translateY(-2px); box-shadow: 0 16px 30px rgba(23,23,23,.12); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+/* Ritmo Pro Woman — refinamento de interface */
+.woman-mobile-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .35rem;
+  position: fixed;
+  left: .75rem;
+  right: .75rem;
+  bottom: max(.75rem, env(safe-area-inset-bottom));
+  z-index: 60;
+  padding: .4rem;
+  border: 1px solid rgba(23,23,23,.10);
+  border-radius: 1.25rem;
+  background: rgba(255,253,249,.92);
+  box-shadow: 0 14px 36px rgba(23,23,23,.14);
+  backdrop-filter: blur(16px);
+}
+.woman-mobile-nav a {
+  min-height: 2.7rem;
+  display: grid;
+  place-items: center;
+  border-radius: .9rem;
+  color: rgba(23,23,23,.55);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  transition: background-color .18s ease, color .18s ease, transform .18s ease;
+}
+.woman-mobile-nav a.active { background: var(--pink); color: var(--ink); }
+.woman-mobile-nav a:active { transform: scale(.96); }
+@media (min-width: 1024px) { .woman-mobile-nav { display: none; } }
+@media (max-width: 1023px) {
+  main { padding-bottom: 5.5rem; }
+  .exercise-card { box-shadow: 0 8px 20px rgba(23,23,23,.07); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .exercise-card { transition: transform 180ms var(--ease-out), box-shadow 180ms var(--ease-out), border-color 180ms ease; }
+}
