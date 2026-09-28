@@ -22,32 +22,32 @@ import AppHeader from "@/components/AppHeader";
 import { SmartwatchPanel } from "@/components/SmartwatchPanel";
 
 const STORAGE_ASSETS: Record<string, string> = {
-  "agachamento-bulgaro": "/manus-storage/agachamento-bulgaro_891cf377.png",
-  "agachamento-smith": "/manus-storage/agachamento-smith_bb5ce4a7.png",
-  "cadeira-abdutora": "/manus-storage/cadeira-abdutora_52fa0f21.png",
-  "cadeira-adutora": "/manus-storage/cadeira-adutora_62799837.png",
-  "cadeira-extensora": "/manus-storage/cadeira-extensora_e8ae9141.png",
-  "desenvolvimento-ombros": "/manus-storage/desenvolvimento-ombros_37111aae.png",
-  "elevacao-lateral-halteres": "/manus-storage/elevacao-lateral-halteres_a93bd4f5.png",
-  "hip-thrust": "/manus-storage/hip-thrust_d11d5899.png",
-  "leg-press-45": "/manus-storage/leg-press-45_cc84911a.png",
-  "mesa-flexora": "/manus-storage/mesa-flexora_9290c436.png",
-  "passada-afundo": "/manus-storage/passada-afundo_0547620e.png",
-  "puxada-frontal-polia": "/manus-storage/puxada-frontal-polia_aa0c6299.png",
-  "puxada-fechada-supinada": "/manus-storage/puxada-fechada-supinada_d6ec89e1.png",
-  "remada-maquina": "/manus-storage/remada-maquina_f67c110a.png",
-  "remada-sentada-polia": "/manus-storage/remada-sentada-polia_714e812f.png",
-  "rosca-direta-barra": "/manus-storage/rosca-direta-barra_7880a996.png",
-  "rosca-martelo-halteres": "/manus-storage/rosca-martelo-halteres_9d724415.png",
-  "remada-cavalinho": "/manus-storage/remada-cavalinho_171e62d1.png",
-  "stiff-barra": "/manus-storage/stiff-barra_2caca81b.png",
-  "supino-halteres": "/manus-storage/supino-halteres_734a389b.png",
-  "supino-inclinado-halteres": "/manus-storage/supino-inclinado-halteres_9231f4ce.png",
-  "triceps-frances-halter": "/manus-storage/triceps-frances-halter_f733c1b9.png",
-  "triceps-polia-corda": "/manus-storage/triceps-polia-corda_6dccee9b.png",
+  "agachamento-bulgaro": "/exercises/agachamento-bulgaro_891cf377.png",
+  "agachamento-smith": "/exercises/agachamento-smith_bb5ce4a7.png",
+  "cadeira-abdutora": "/exercises/cadeira-abdutora_52fa0f21.png",
+  "cadeira-adutora": "/exercises/cadeira-adutora_62799837.png",
+  "cadeira-extensora": "/exercises/cadeira-extensora_e8ae9141.png",
+  "desenvolvimento-ombros": "/exercises/desenvolvimento-ombros_37111aae.png",
+  "elevacao-lateral-halteres": "/exercises/elevacao-lateral-halteres_a93bd4f5.png",
+  "hip-thrust": "/exercises/hip-thrust_d11d5899.png",
+  "leg-press-45": "/exercises/leg-press-45_cc84911a.png",
+  "mesa-flexora": "/exercises/mesa-flexora_9290c436.png",
+  "passada-afundo": "/exercises/passada-afundo_0547620e.png",
+  "puxada-frontal-polia": "/exercises/puxada-frontal-polia_aa0c6299.png",
+  "puxada-fechada-supinada": "/exercises/puxada-fechada-supinada_d6ec89e1.png",
+  "remada-maquina": "/exercises/remada-maquina_f67c110a.png",
+  "remada-sentada-polia": "/exercises/remada-sentada-polia_714e812f.png",
+  "rosca-direta-barra": "/exercises/rosca-direta-barra_7880a996.png",
+  "rosca-martelo-halteres": "/exercises/rosca-martelo-halteres_9d724415.png",
+  "remada-cavalinho": "/exercises/remada-cavalinho_171e62d1.png",
+  "stiff-barra": "/exercises/stiff-barra_2caca81b.png",
+  "supino-halteres": "/exercises/supino-halteres_734a389b.png",
+  "supino-inclinado-halteres": "/exercises/supino-inclinado-halteres_9231f4ce.png",
+  "triceps-frances-halter": "/exercises/triceps-frances-halter_f733c1b9.png",
+  "triceps-polia-corda": "/exercises/triceps-polia-corda_6dccee9b.png",
 };
 
-const asset = (name: string) => STORAGE_ASSETS[name] ?? "/manus-storage/agachamento-smith_bb5ce4a7.png";
+const asset = (name: string) => STORAGE_ASSETS[name] ?? "/exercises/agachamento-smith_bb5ce4a7.png";
 
 type Exercise = {
   id: string;
